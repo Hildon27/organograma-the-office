@@ -13,6 +13,7 @@ const Time = (props) => {
             cargo={colaborador.valorCargo}
             img={colaborador.valorImg}
             corDeFundo={props.corPrimaria}
+            aoDeletar={props.aoDeletar}
           />
         ))}
       </div>

@@ -1,14 +1,16 @@
 import "./Footer.css";
+import { FaInstagram } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="icones">
         <a href="https://github.com/Hildon27" rel="noopener noreferrer" target="_blank">
-          <img src="/imagens/github.png" alt="Icone Github"></img>
+          <FaGithub size={30}/>
         </a>
         <a href="https://www.instagram.com/hildonregisneto/" rel="noopener noreferrer" target="_blank">
-          <img src="/imagens/ig.png" alt="Icone Instagram"></img>
+          <FaInstagram size={30}/>
         </a>
       </div>
       <div className="logo">

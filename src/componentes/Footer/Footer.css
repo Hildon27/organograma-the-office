@@ -1,16 +1,15 @@
 .footer {
     background-color: #6278F7;
-    background-image: url("../../../public/imagens/fundo.png");
     display: flex;
-    justify-content: space-around; /* Coloca os itens com espaçamento igual entre eles */
-    align-items: center; /* Alinha os itens verticalmente no centro */
-    padding: 20px;
+    justify-content: space-around; 
+    align-items: center; 
+    padding: 30px;
 
 }
 
 .icones {
     display: flex;
-    gap: 20px; /* Espaço entre os ícones */
+    gap: 20px;
 }
 
 .icones a {
@@ -20,12 +19,12 @@
 }
 
 .logo img {
-    width: 150px; /* Ajuste o tamanho da logo conforme necessário */
+    width: 150px;
     height: auto;
-    margin-top: px;
+
 }
 
 .footer-text h5 {
-    font-size: 14px; /* Tamanho do texto */
-    color: #FFF; /* Cor do texto */
+    font-size: 14px;
+    color: #FFF;
 }
