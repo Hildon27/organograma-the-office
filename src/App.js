@@ -6,38 +6,32 @@ import { theOfficeCharacters} from "./utils"
 import Footer from "./componentes/Footer/index.js";
 
 function App() {
-  const times = [
+  const [times, setTimes] = useState([
     {
       nome: "Gerente Regional",
-      corPrimaria: "#57C278",
-      corSecundaria: "#D9F7E9",
+      cor: "#57C278",
     },
     {
       nome: "Assistente do Gerente Regional",
-      corPrimaria: "#82CFFA",
-      corSecundaria: "#E8F8FF",
+      cor: "#82CFFA",
     },
     {
       nome: "Vendas",
-      corPrimaria: "#A6D157",
-      corSecundaria: "#F0F8E2",
+      cor: "#E06B69",
     },
     {
       nome: "Recepção",
-      corPrimaria: "#E06B69",
-      corSecundaria: "#FDE7E8",
+      cor: "#DB6EBF",
     },
     {
       nome: "Contabilidade",
-      corPrimaria: "#DB6EBF",
-      corSecundaria: "#FAE9F5",
+      cor: "#FFBA05",
     },
     {
       nome: "Armazém",
-      corPrimaria: "#FFBA05",
-      corSecundaria: "#FFF5D9",
+      cor: "#FF8A29",
     },
-  ];
+  ]);
 
   const [colaboradores, setColaboradores] = useState(theOfficeCharacters);
 
@@ -48,6 +42,15 @@ function App() {
   const deletarColaborador = () => {
     console.log("por favor aparece")
   }
+
+  function mudarCorTime(novaCor, nomeTime) {
+    setTimes(times.map(time => {
+        if(time.nome=== nomeTime) {
+            time.cor = novaCor;
+        }
+        return time;
+    }));
+}
 
   return (
     <div className="App">
@@ -62,14 +65,15 @@ function App() {
         <Time
           key={time.nome}
           nome={time.nome}
-          corPrimaria={time.corPrimaria}
-          corSecundaria={time.corSecundaria}
+          cor={time.cor}
           colaboradores={colaboradores.filter(colaborador => colaborador.valorTime === time.nome)}
           aoDeletar={deletarColaborador}
+          mudarCorSecundariaTime={mudarCorTime}
         />
       ))}
       <Footer />
     </div>
   );
 }
+
 export default App;
