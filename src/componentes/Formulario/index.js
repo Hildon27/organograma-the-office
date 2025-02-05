@@ -43,6 +43,7 @@ const Formulario = (props) => {
       <form onSubmit={aoSalvar}>
         <h2>Preencha os dados para criar o card do colaborador</h2>
         <CampoTexto
+          type="text"
           valor={valorNome}
           aoAlterar={(valor) => setNome(valor)}
           obrigatorio={true}
@@ -50,6 +51,7 @@ const Formulario = (props) => {
           placeholder="Digite o seu nome"
         />
         <CampoTexto
+          type="text"
           valor={valorCargo}
           aoAlterar={(valor) => setCargo(valor)}
           obrigatorio={true}
@@ -57,6 +59,7 @@ const Formulario = (props) => {
           placeholder="Digite o seu cargo"
         />
         <CampoTexto
+          type="text"
           valor={valorImg}
           aoAlterar={(valor) => setImg(valor)}
           label="Imagem"
@@ -74,6 +77,7 @@ const Formulario = (props) => {
       <form onSubmit={aoCadastrarNovoTime}>
         <h2>Preencha os dados para criar um novo time</h2>
         <CampoTexto
+          type="text"
           valor={nome}
           aoAlterar={(valor) => setNomeTime(valor)}
           obrigatorio={true}
@@ -81,6 +85,7 @@ const Formulario = (props) => {
           placeholder="Digite o nome do time"
         />
         <CampoTexto
+          type="color"
           valor={cor}
           aoAlterar={(valor) => setCorTime(valor)}
           obrigatorio={true}
