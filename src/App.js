@@ -4,30 +4,37 @@ import { useState } from "react";
 import Time from "./componentes/Time/index.js";
 import { theOfficeCharacters} from "./utils"
 import Footer from "./componentes/Footer/index.js";
+import { v4 as uuidv4 } from 'uuid';
 
 function App() {
   const [times, setTimes] = useState([
     {
+      id: uuidv4(),
       nome: "Gerente Regional",
       cor: "#57C278",
     },
     {
+      id: uuidv4(),
       nome: "Assistente do Gerente Regional",
       cor: "#82CFFA",
     },
     {
+      id: uuidv4(),
       nome: "Vendas",
       cor: "#E06B69",
     },
     {
+      id: uuidv4(),
       nome: "Recepção",
       cor: "#DB6EBF",
     },
     {
+      id: uuidv4(),
       nome: "Contabilidade",
       cor: "#FFBA05",
     },
     {
+      id: uuidv4(),
       nome: "Armazém",
       cor: "#FF8A29",
     },
@@ -39,13 +46,13 @@ function App() {
     setColaboradores([...colaboradores, colaborador]);
   };
 
-  const deletarColaborador = () => {
-    console.log("por favor aparece")
+  const deletarColaborador = (id) => {
+    setColaboradores(colaboradores.filter(colaborador => colaborador.id !== id));
   }
 
-  function mudarCorTime(novaCor, nomeTime) {
+  function mudarCorTime(novaCor, id) {
     setTimes(times.map(time => {
-        if(time.nome=== nomeTime) {
+        if(time.id=== id) {
             time.cor = novaCor;
         }
         return time;
@@ -66,6 +73,7 @@ function App() {
           key={time.nome}
           nome={time.nome}
           cor={time.cor}
+          id={time.id}
           colaboradores={colaboradores.filter(colaborador => colaborador.valorTime === time.nome)}
           aoDeletar={deletarColaborador}
           mudarCorSecundariaTime={mudarCorTime}
