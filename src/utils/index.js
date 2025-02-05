@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 export const theOfficeCharacters = [
   {
     id: uuidv4(),
+    favorito: false,
     valorNome: "Michael Scott",
     valorTime: "Gerente Regional",
     valorCargo:
@@ -11,6 +12,7 @@ export const theOfficeCharacters = [
   },
   {
     id: uuidv4(),
+    favorito: false,
     valorNome: "Dwight Schrute",
     valorTime: "Assistente do Gerente Regional",
     valorCargo:
@@ -20,6 +22,7 @@ export const theOfficeCharacters = [
   },
   {
     id: uuidv4(),
+    favorito: false,
     valorNome: "Jim Halpert",
     valorTime: "Vendas",
     valorCargo:
@@ -28,6 +31,7 @@ export const theOfficeCharacters = [
   },
   {
     id: uuidv4(),
+    favorito: false,
     valorNome: "Stanley Hudson",
     valorTime: "Vendas",
     valorCargo:
@@ -37,6 +41,7 @@ export const theOfficeCharacters = [
   },
   {
     id: uuidv4(),
+    favorito: false,
     valorNome: "Phyllis Vance",
     valorTime: "Vendas",
     valorCargo:
@@ -46,6 +51,7 @@ export const theOfficeCharacters = [
   },
   {
     id: uuidv4(),
+    favorito: false,
     valorNome: "Andy Bernard",
     valorTime: "Vendas",
     valorCargo:
@@ -54,6 +60,7 @@ export const theOfficeCharacters = [
   },
   {
     id: uuidv4(),
+    favorito: false,
     valorNome: "Pam Beesly",
     valorTime: "Recepção",
     valorCargo:
@@ -62,6 +69,7 @@ export const theOfficeCharacters = [
   },
   {
     id: uuidv4(),
+    favorito: false,
     valorNome: "Angela Martin",
     valorTime: "Contabilidade",
     valorCargo:
@@ -71,6 +79,7 @@ export const theOfficeCharacters = [
   },
   {
     id: uuidv4(),
+    favorito: false,
     valorNome: "Kevin Malone",
     valorTime: "Contabilidade",
     valorCargo:
@@ -80,6 +89,7 @@ export const theOfficeCharacters = [
   },
   {
     id: uuidv4(),
+    favorito: false,
     valorNome: "Oscar Martinez",
     valorTime: "Contabilidade",
     valorCargo:
@@ -89,6 +99,7 @@ export const theOfficeCharacters = [
   },
   {
     id: uuidv4(),
+    favorito: false,
     valorNome: "Darryl Philbin",
     valorTime: "Armazém",
     valorCargo:
@@ -98,6 +109,7 @@ export const theOfficeCharacters = [
   },
   {
     id: uuidv4(),
+    favorito: false,
     valorNome: "Roy Anderson",
     valorTime: "Armazém",
     valorCargo:
@@ -106,6 +118,7 @@ export const theOfficeCharacters = [
   },
   {
     id: uuidv4(),
+    favorito: false,
     valorNome: "Madge Madsen",
     valorTime: "Armazém",
     valorCargo:
@@ -115,6 +128,7 @@ export const theOfficeCharacters = [
   },
   {
     id: uuidv4(),
+    favorito: false,
     valorNome: "Lonny Collins",
     valorTime: "Armazém",
     valorCargo:
