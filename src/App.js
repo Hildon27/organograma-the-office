@@ -2,9 +2,9 @@ import Banner from "./componentes/Banner/index.js";
 import Formulario from "./componentes/Formulario/index.js";
 import { useState } from "react";
 import Time from "./componentes/Time/index.js";
-import { theOfficeCharacters} from "./utils"
+import { theOfficeCharacters } from "./utils";
 import Footer from "./componentes/Footer/index.js";
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
 
 function App() {
   const [times, setTimes] = useState([
@@ -47,22 +47,31 @@ function App() {
   };
 
   const deletarColaborador = (id) => {
-    setColaboradores(colaboradores.filter(colaborador => colaborador.id !== id));
-  }
+    setColaboradores(
+      colaboradores.filter((colaborador) => colaborador.id !== id)
+    );
+  };
 
   function mudarCorTime(novaCor, id) {
-    setTimes(times.map(time => {
-        if(time.id=== id) {
-            time.cor = novaCor;
+    setTimes(
+      times.map((time) => {
+        if (time.id === id) {
+          time.cor = novaCor;
         }
         return time;
-    }));
-}
+      })
+    );
+  }
+
+  function cadastrarTime(novoTime) {
+    setTimes([...times, { ...novoTime, id: uuidv4() } ])
+  }
 
   return (
     <div className="App">
       <Banner />
       <Formulario
+        cadastrarTime={cadastrarTime}
         cadastrarColaborador={(colaborador) =>
           novoColaboradorAdicionado(colaborador)
         }
@@ -74,7 +83,9 @@ function App() {
           nome={time.nome}
           cor={time.cor}
           id={time.id}
-          colaboradores={colaboradores.filter(colaborador => colaborador.valorTime === time.nome)}
+          colaboradores={colaboradores.filter(
+            (colaborador) => colaborador.valorTime === time.nome
+          )}
           aoDeletar={deletarColaborador}
           mudarCorSecundariaTime={mudarCorTime}
         />
